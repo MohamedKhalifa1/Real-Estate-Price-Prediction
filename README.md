@@ -2,18 +2,18 @@
 
 A comprehensive machine learning project for predicting real estate prices in Egypt using advanced data science techniques and multiple modeling approaches.
 
-## 🏠 Project Overview
+## Project Overview
 
 This project analyzes Egyptian real estate listings to build predictive models for property price estimation. The analysis includes data exploration, preprocessing, feature engineering, and implementation of various machine learning algorithms including traditional ML models and deep learning approaches.
 
-## 📊 Dataset
+## Dataset
 
 - **Source**: [Egyptian Real Estate Listings](https://www.kaggle.com/datasets/hassankhaled21/egyptian-real-estate-listings) from Kaggle
 - **Size**: ~19,924 property listings
 - **Features**: Property type, location, size, bedrooms, bathrooms, payment method, and more
 - **Target**: Property price prediction
 
-## 🚀 Key Features
+## Key Features
 
 - **Comprehensive Data Analysis**: Exploratory data analysis with interactive visualizations
 - **Advanced Preprocessing**: Data cleaning, feature engineering, and transformation
@@ -21,7 +21,7 @@ This project analyzes Egyptian real estate listings to build predictive models f
 - **Model Comparison**: Systematic evaluation using MLflow for experiment tracking
 - **Production Ready**: Trained models saved for deployment and prediction
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Real-Estate-Analysis/
@@ -50,7 +50,7 @@ Real-Estate-Analysis/
 └── README.md                        # Project documentation
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Python 3.12+**
 - **Data Science**: pandas, numpy, matplotlib, seaborn, plotly
@@ -59,7 +59,7 @@ Real-Estate-Analysis/
 - **Statistical Analysis**: statsmodels
 - **Data Source**: Kaggle API
 
-## 📈 Model Performance
+## Model Performance
 
 The project implements and compares multiple machine learning approaches:
 
@@ -79,7 +79,7 @@ The project implements and compares multiple machine learning approaches:
 - **RMSE**: 19.19%
 - **Cross-validation**: 5-fold validation for robust evaluation
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -126,14 +126,14 @@ The project implements and compares multiple machine learning approaches:
    mlflow ui --backend-store-uri models/mlruns/
    ```
 
-## 📊 Key Insights
+## Key Insights
 
 - **Location Impact**: Property location significantly affects pricing
 - **Size Correlation**: Strong positive correlation between property size and price
 - **Property Type**: Different property types show distinct pricing patterns
 - **Feature Engineering**: Created meaningful features that improved model performance
 
-## 🔧 Model Deployment
+## Model Deployment
 
 The trained models are saved and ready for deployment:
 
@@ -147,7 +147,7 @@ scaler = joblib.load('models/scaler.pkl')
 prediction = model.predict(scaled_features)
 ```
 
-## 📊 Visualizations
+## Visualizations
 
 The project includes interactive visualizations:
 - Property distribution maps
@@ -155,7 +155,7 @@ The project includes interactive visualizations:
 - Feature correlation matrices
 - Model performance comparisons
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -163,15 +163,15 @@ The project includes interactive visualizations:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
+## Contact
 
 For questions or suggestions, please open an issue in the repository.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Dataset provided by [Hassan Khaled](https://www.kaggle.com/hassankhaled21) on Kaggle
 - MLflow for experiment tracking
