@@ -46,7 +46,13 @@ Real-Estate-Analysis/
 │   └── 05_prediction_notebook.ipynb # Model deployment & prediction
 ├── reports/                          # Generated reports
 │   └── tree_map_fig.html            # Interactive visualizations
+├── scripts/                          # API implementation
+│   ├── price_prediction.py          # Core prediction logic
+│   ├── input_schema.py              # Data validation schemas
+│   └── routes/                      # API routes
+├── backup/                           # Backup files
 ├── requirements.txt                  # Python dependencies
+├── main.py                          # FastAPI application entry point
 └── README.md                        # Project documentation
 ```
 
@@ -57,6 +63,7 @@ Real-Estate-Analysis/
 - **Machine Learning**: scikit-learn, xgboost, torch
 - **Experiment Tracking**: MLflow
 - **Statistical Analysis**: statsmodels
+- **Web Framework**: FastAPI
 - **Data Source**: Kaggle API
 
 ## Model Performance
@@ -86,12 +93,13 @@ The project implements and compares multiple machine learning approaches:
 - Python 3.12+
 - Jupyter Notebook
 - Git
+- Kaggle API credentials
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/MohamedKhalifa1/Real-Estate-Price-Prediction.git
    cd Real-Estate-Analysis
    ```
 
@@ -100,7 +108,13 @@ The project implements and compares multiple machine learning approaches:
    pip install -r requirements.txt
    ```
 
-3. **Download the dataset**
+3. **Set up Kaggle API credentials**
+   ```bash
+   # Create kaggle.json file in ~/.kaggle/ directory
+   # Download from: https://www.kaggle.com/account
+   ```
+
+4. **Download the dataset**
    - The dataset will be automatically downloaded from Kaggle when running the exploration notebook
    - Ensure you have Kaggle API credentials set up
 
@@ -125,6 +139,35 @@ The project implements and compares multiple machine learning approaches:
    ```bash
    mlflow ui --backend-store-uri models/mlruns/
    ```
+
+4. **Run the API server**
+   ```bash
+   python main.py
+   ```
+
+## API Usage
+
+The project includes a FastAPI-based prediction service:
+
+```python
+# Example API request
+import requests
+
+# Make prediction request
+response = requests.post(
+    "http://localhost:8000/predict",
+    json={
+        "property_type": "Apartment",
+        "location": "New Cairo",
+        "size": 120,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "payment_method": "Cash"
+    }
+)
+
+prediction = response.json()["prediction"]
+```
 
 ## Key Insights
 
