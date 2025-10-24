@@ -143,8 +143,10 @@ The project implements and compares multiple machine learning approaches:
 4. **Run the API server**
    ```bash
    python main.py
+     
+   # Or using uvicorn for development
+   uvicorn main:app --host 0.0.0.0 --port 8000 --reload
    ```
-
 ## API Usage
 
 The project includes a FastAPI-based prediction service:
